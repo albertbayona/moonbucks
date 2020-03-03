@@ -16,8 +16,8 @@
 				background-color: var(--groc);
 			}
 			button {
-				color: #FFFFFF;
-			    background-color: #868686;
+				color: black;
+			    background-color: var(--verd);
 			    border: none;
 			    overflow: hidden;
 			    text-decoration: none;
@@ -37,8 +37,33 @@
 			.titollateral {
 				grid-area: titollateral;
 			}
-			.text {
-				grid-area: text_cafe;
+			.cafe_detall {
+				background-color: #ffffffa8;
+				border-radius: 25px;
+				padding: 10px;
+			}
+			.cafe_detall1 {
+				grid-area: cafe_detall1;
+			}
+			.cafe_detall2 {
+				grid-area: cafe_detall2;
+			}
+			.cafe_detall3 {
+				grid-area: cafe_detall3;
+			}
+			.cafe_detall4 {
+				grid-area: cafe_detall4;
+			}
+			.detall {
+				grid-area: detall;
+				display: grid;
+				grid-template-rows: repeat(4, 110px);
+				grid-gap: 10px;
+				grid-template-areas:
+				"cafe_detall1"
+				"cafe_detall2"
+				"cafe_detall3"
+				"cafe_detall4";
 			}
 			.lateral {
 				grid-area: lateral;
@@ -48,8 +73,9 @@
                 grid-template-columns: 1fr;
 				grid-template-areas:
 				"titollateral"
-				"text_cafe";
+				"detall";
 				padding: 10px;
+
 			}
 			.esquerra {
 				grid-area: esquerra;
@@ -139,7 +165,7 @@
 				grid-template-areas:
 				 ". . ."
 				 ". button ."
-				 "missatge button ."
+				 ". button ."
 				 ". button ."
 				 ". . .";
 				grid-area: peu;
@@ -186,7 +212,12 @@
             </div>
 			<div class="lateral">
 				<div class="titollateral"><h3>La meva comanda</h3></div>
-                <div class="text">Actualment no ha demanat cap café</div>
+				<div class="detall">
+	                <div class="cafe_detall1 cafe_detall"><p><strong>Café mochablanc</strong></p><p>- Tamany: Gran</p><p>- Temperatura: Calent</p></div>
+	                <div class="cafe_detall2 cafe_detall"><p><strong>Café mochablanc</strong></p><p>- Tamany: Gran</p><p>- Temperatura: Calent</p></div>
+	                <div class="cafe_detall3 cafe_detall"><p><strong>Café americà</strong></p><p>- Tamany: Mitjà</p><p>- Temperatura: Fred</p><p>- Endolcidor: Sucre moré</p><p>- Topping: M&M's (+0,50€)</p></div>
+	                <div class="cafe_detall4 cafe_detall"><p><strong>Café americà</strong></p><p>- Tamany: Mitjà</p><p>- Temperatura: Fred</p><p>- Endolcidor: Sucre moré</p><p>- Topping: M&M's (+0,50€)</p></div>
+	            </div>
 			</div>
 			<div class="esquerra"></div>
 			<div class="contingut">
@@ -237,8 +268,7 @@
 			</div>
 			<div class="dreta"></div>
 			<div class="peu">
-				<div class="missatge">Import total: 0,00€ (Ha d'arribar a l'import mínim per a poder procedir al pagament)</div>
-				<button class="disabled" type="button" onclick="location.href=''" disabled><strong>Pagar</strong></button>
+				<button class="disabled" type="button" onclick="location.href=''"><strong>Pagar</strong></button>
 			</div>
 		</div>
 	</body>
