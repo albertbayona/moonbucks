@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+            elemento {
+                --verd:  #A6EAC1;
+                --groc:  #FBFBD7;
+                --grocfosc:  #F1F1C0;
+                --taronja:  #FDC79B;
+                --rosa:  #F2E2D5;
+            }
+
+
+
+            body{
+                padding: 0;
+                margin:0;
+                background-color: var(--verd);
+            }
+            .container{
+                display: grid;
+                height: 100vh;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6,1fr);
+                justify-content: center;
+            }
+            .info{
+                display: grid;
+                grid-template-rows: 2fr 1fr;
+            }
+            .titol{
+
+            }
+            .descripcio{
+
+            }
+            .tamany{
+                display: grid;
+                grid-auto-flow: column;
+            }
+            .petit{
+                transform: scale(0.5);
+            }
+            .mitja{
+                transform: scale(0.75);
+            }
+
+            .temperatura{
+
+            }
+            .edulcorante{
+
+            }
+            .topping{
+
+            }
+            .img-object{
+                height: 100%;
+                object-fit: contain;
+                display: grid;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="info">
+                <div class="titol">
+                    Café mochablanc
+                </div>
+                <div class="descripcio">
+                    Irresistible combinación de chocolate blanco, shots de Espresso y leche perfectamente vaporizada, coronado con crema batida.
+                </div>
+            </div>
+            <div class="tamany">
+                <div class="cafe"><img class="img-object petit" src="images/mochablanc.png" alt="Imatge d'un café mochablanc"></img></div>
+                <div class="cafe"><img class="img-object mitja" src="images/mochablanc.png" alt="Imatge d'un café mochablanc"></img></div>
+                <div class="cafe"><img class="img-object gran" src="images/mochablanc.png" alt="Imatge d'un café mochablanc"></img></div>
+            </div>
+            <div class="temperatura">
+
+            </div>
+            <div class="edulcorante">
+
+            </div>
+            <div class="topping">
+
+            </div>
+            <div class="validar">
+
+            </div>
+        </div>
+    </body>
+</html>
