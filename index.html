@@ -5,13 +5,18 @@
 				margin: 0px;
 				padding: 0px;
 			}
-			.capçalera {
+			.capcalera {
 				grid-area: capçalera;
 				background-color: brown;
+                display:grid;
+                grid-template-columns: 4fr;
 			}
 			.lateral {
 				grid-area: lateral;
 				background-color: gray;
+                display: grid;
+                grid-template-rows: 25px 1fr;
+                justify-content: center;
 			}
 			.esquerra {
 				grid-area: esquerra;
@@ -19,87 +24,54 @@
 			}
 			.cafe1 {
 				grid-area: cafe1;
-				/* background-image: url(cafe_cappuccino.png);
-				background-size: contain;
-    			background-position: center;
-    			background-repeat: no-repeat; */
+
 			}
 			.cafe2 {
 				grid-area: cafe2;
-				/* background-image: url(cafe-americano-oferta.png);
-				background-size: contain;
-    			background-position: center;
-    			background-repeat: no-repeat; */
+
 			}
 			.cafe3 {
 				grid-area: cafe3;
-				/* background-image: url(cafe-expresso.png); */
-				/* background-size: contain;
-    			background-position: center;
-    			background-repeat: no-repeat; */
+
 			}
 			.cafe4 {
 				grid-area: cafe4;
-				/* background-image: url(cafe-mocha.png); */
-				/* background-size: contain;
-    			background-position: center;
-    			background-repeat: no-repeat; */
+
 			}
 			.cafe5 {
 				grid-area: cafe5;
-				/* background-image: url(cappuccino-freddo.png);
-				background-size: contain;
-    			background-position: center;
-    			background-repeat: no-repeat; */
+
 			}
 			.cafe6 {
 				grid-area: cafe6;
-				/* background-image: url(caramel-macchiato.png);
-				background-size: contain;
-    			background-position: center;
-    			background-repeat: no-repeat; */
+
 			}
 			.cafe7 {
 				grid-area: cafe7;
-				/* background-image: url(cold-brew.png);
-				background-size: contain;
-    			background-position: center;
-    			background-repeat: no-repeat; */
+
 			}
 			.cafe8 {
 				grid-area: cafe8;
-				/* background-image: url(flat-white.png);
-				background-size: contain;
-    			background-position: center;
-    			background-repeat: no-repeat; */
+
 			}
 			.cafe9 {
 				grid-area: cafe9;
-				/* background-image: url(latte.png);
-				background-size: contain;
-    			background-position: center;
-    			background-repeat: no-repeat; */
+
 			}
 			.cafe10 {
 				grid-area: cafe10;
-				/* background-image: url(latte-macchiato.png);
-				background-size: contain;
-    			background-position: center;
-    			background-repeat: no-repeat; */
+
 			}
 			.cafe11 {
 				grid-area: cafe11;
-				/* background-image: url(mochablanc.png);
-				background-size: contain;
-    			background-position: center;
-    			background-repeat: no-repeat; */
+
 			}
 			.contingut {
 				display: grid;
 				grid-gap: 10px;
 				justify-content: space-around;
 				grid-template-columns: 1fr 1fr 1fr;
-				grid-template-rows: repeat(3, 1fr);
+				grid-template-rows: repeat(4, 1fr);
 				grid-template-areas:
 				"cafe1 cafe2 cafe3"
 				"cafe4 cafe5 cafe6"
@@ -133,20 +105,43 @@
                 object-fit: contain;
                 display: grid;
             }
+            .mis-pedidos{
+                width:100%;
+                display: grid;
+                grid-auto-rows: 35px;
+                grid-gap: 2px;
+                background-color: blue;
+            }
+            .mis-pedidos-row{
+                display: grid;
+                background-color: green;
+                grid-auto-flow: column;
+                grid-template-columns: auto 1fr 1fr;
+            }
 		</style>
 	</head>
 	<body>
 		<div class="contenidor">
-			<div class="capçalera"></div>
+			<div class="capcalera">
+                <div class="logo">
+                    <img class="img-object" src="images/moonbucks.png" alt="">
+                </div>
+            </div>
 			<div class="lateral">
-				<div class="submenu1">SUBMENÚ 1</div>
-				<div class="submenu2">SUBMENÚ 2</div>
-				<div class="submenu3">SUBMENÚ 3</div>
-				<div class="submenu4">SUBMENÚ 4</div>
-				<div class="submenu5">SUBMENÚ 5</div>
-				<div class="submenu6">SUBMENÚ 6</div>
-				<div class="submenu7">SUBMENÚ 7</div>
-				<div class="submenu8">SUBMENÚ 8</div>
+				<div><p>MIS PEDIDOS</p></div>
+                <div class="mis-pedidos">
+                    <div class="mis-pedidos-row">
+                    </div>
+                    <div class="mis-pedidos-row">
+                    </div>
+                    <div class="mis-pedidos-row">
+                    </div>
+                    <div class="mis-pedidos-row">
+                    </div>
+                    <div class="mis-pedidos-row">
+                    </div>
+                </div>
+
 			</div>
 			<div class="esquerra"></div>
 			<div class="contingut">
