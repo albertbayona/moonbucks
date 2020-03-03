@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+        :root{
+            --verde: rgba(165, 233, 193, 1);
+            --amarillo: rgba(251, 251, 214, 1);
+            --amarillo-oscuro: rgba(240, 240, 191, 1);
+            --naranja:  rgba(253, 198, 154, 1);
+            --beig: rgba(242, 226, 212, 1);
+
+        }
+        body{
+            background-color: var(--verde);
+            display:grid;
+            /* grid-gap: 20px; */
+            grid-template-rows: repeat(5,300px);
+            grid-template-columns: 400px;
+        }
+        .bandera{
+            width: 500px;
+            height: 300px;
+        }
+        .logo{
+
+        }
+        </style>
+    </head>
+    <body>
+            <img class="logo" src="images/moonbucks.png" alt="logo moonbucks">
+            <img class="bandera" src="images/catalunya.png" alt="idioma catalan">
+            <img class="bandera" src="images/espana.jpg" alt="idioma español">
+            <img class="bandera" src="images/england.jpg" alt="idioma ingles">
+            <div id="prueba" style="background:url('images/england.jpg');"/>
+
+    </body>
+</html>
