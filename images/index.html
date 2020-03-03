@@ -19,17 +19,17 @@
 			}
 			.cafe1 {
 				grid-area: cafe1;
-				background-image: url(cafe_cappuccino.png);
+				/* background-image: url(cafe_cappuccino.png);
 				background-size: contain;
     			background-position: center;
-    			background-repeat: no-repeat;
+    			background-repeat: no-repeat; */
 			}
 			.cafe2 {
 				grid-area: cafe2;
-				background-image: url(cafe-americano-oferta.png);
+				/* background-image: url(cafe-americano-oferta.png);
 				background-size: contain;
     			background-position: center;
-    			background-repeat: no-repeat;
+    			background-repeat: no-repeat; */
 			}
 			.cafe3 {
 				grid-area: cafe3;
@@ -100,7 +100,7 @@
 				justify-content: space-around;
 				grid-template-columns: 1fr 1fr 1fr;
 				grid-template-rows: repeat(3, 1fr);
-				grid-template-areas: 
+				grid-template-areas:
 				"cafe1 cafe2 cafe3"
 				"cafe4 cafe5 cafe6"
 				"cafe7 cafe8 cafe9"
@@ -122,11 +122,17 @@
 				grid-gap: 0px 10px;
 				grid-template-columns: 1fr 1fr 5fr 1fr;
 				grid-template-rows: 1fr 8fr 1fr;
-				grid-template-areas: 
+				grid-template-areas:
 				"esquerra capçalera capçalera dreta"
 				"esquerra lateral contingut dreta"
 				"esquerra lateral peu dreta";
 			}
+            .img-object{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: grid;
+            }
 		</style>
 	</head>
 	<body>
@@ -144,14 +150,14 @@
 			</div>
 			<div class="esquerra"></div>
 			<div class="contingut">
-				<div class="cafe1">ELEMENT 1</div>
-				<div class="cafe2">ELEMENT 2</div>
-				<div class="cafe3">ELEMENT 3</div>
-				<div class="cafe4">ELEMENT 4</div>
-				<div class="cafe5">ELEMENT 5</div>
-				<div class="cafe6">ELEMENT 6</div>
-				<div class="cafe7">ELEMENT 7</div>
-				<div class="cafe8">ELEMENT 8</div>	
+				<div class="cafe1"><img class="img-object" src="images/cafe_cappuccino.png" alt=""></img></div>
+				<div class="cafe2"><img class="img-object" src="images/cafe-americano-oferta.png" alt="">ELEMENT 2</img></div>
+				<div class="cafe3"><img class="img-object" src="images/" alt="">ELEMENT 3</img></div>
+				<div class="cafe4"><img class="img-object" src="images/" alt="">ELEMENT 4</img></div>
+				<div class="cafe5"><img class="img-object" src="images/" alt="">ELEMENT 5</img></div>
+				<div class="cafe6"><img class="img-object" src="images/" alt="">ELEMENT 6</img></div>
+				<div class="cafe7"><img class="img-object" src="images/" alt="">ELEMENT 7</img></div>
+				<div class="cafe8"><img class="img-object" src="images/" alt="">ELEMENT 8</img></div>
 			</div>
 			<div class="dreta"></div>
 			<div class="peu"></div>
