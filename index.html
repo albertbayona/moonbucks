@@ -5,6 +5,34 @@
 				margin: 0px;
 				padding: 0px;
 			}
+			body {
+				background-color: beige;
+			}
+			button {
+				color: #FFFFFF;
+			    background-color: #4CAF50;
+			    border: none;
+			    overflow: hidden;
+			    text-decoration: none;
+			    text-align: center;
+			    cursor: pointer;
+			    grid-area: button;
+			}
+			.disabled {
+				background-color: #868686;	
+			}
+			/*
+			button {
+				color: #FFFFFF;
+			    background-color: #4CAF50;
+			    border: none;
+			    overflow: hidden;
+			    text-decoration: none;
+			    text-align: center;
+			    cursor: pointer;
+			    grid-area: button;
+			}
+			*/
 			.capcalera {
 				grid-area: capçalera;
 				background-color: brown;
@@ -15,7 +43,6 @@
 				grid-area: lateral;
 				background-color: gray;
                 display: grid;
-				width:100%;
                 grid-template-rows: 25px 1fr;
                 justify-content: center;
 			}
@@ -30,151 +57,98 @@
 				grid-area: titol;
 				text-align: center;
 			}
-			.cafe1 {
+			.cafes {
 				display: grid;
 				grid-template-rows: 3fr 1fr;
 				grid-template-areas:
 				"cafe"
 				"titol";
 				grid-gap: 10px;
+				background-color: white;
+				border-radius: 25px;
+				box-shadow: 2px 2px #888888;
+			}
+			.cafes:hover {
+				box-shadow: 4px 4px #888888;
+				cursor: pointer;
+			}
+			.cafe1 {
 				grid-area: cafe1;
-
 			}
 			.cafe2 {
-				display: grid;
-				grid-template-rows: 3fr 1fr;
-				grid-template-areas:
-				"cafe"
-				"titol";
-				grid-gap: 10px;
 				grid-area: cafe2;
-
 			}
 			.cafe3 {
-				display: grid;
-				grid-template-rows: 3fr 1fr;
-				grid-template-areas:
-				"cafe"
-				"titol";
-				grid-gap: 10px;
 				grid-area: cafe3;
-
 			}
 			.cafe4 {
-				display: grid;
-				grid-template-rows: 3fr 1fr;
-				grid-template-areas:
-				"cafe"
-				"titol";
-				grid-gap: 10px;
 				grid-area: cafe4;
-
 			}
 			.cafe5 {
-				display: grid;
-				grid-template-rows: 3fr 1fr;
-				grid-template-areas:
-				"cafe"
-				"titol";
-				grid-gap: 10px;
 				grid-area: cafe5;
-
 			}
 			.cafe6 {
-				display: grid;
-				grid-template-rows: 3fr 1fr;
-				grid-template-areas:
-				"cafe"
-				"titol";
-				grid-gap: 10px;
 				grid-area: cafe6;
-
 			}
 			.cafe7 {
-				display: grid;
-				grid-template-rows: 3fr 1fr;
-				grid-template-areas:
-				"cafe"
-				"titol";
-				grid-gap: 10px;
 				grid-area: cafe7;
-
 			}
 			.cafe8 {
-				display: grid;
-				grid-template-rows: 3fr 1fr;
-				grid-template-areas:
-				"cafe"
-				"titol";
-				grid-gap: 10px;
 				grid-area: cafe8;
-
 			}
 			.cafe9 {
-				display: grid;
-				grid-template-rows: 3fr 1fr;
-				grid-template-areas:
-				"cafe"
-				"titol";
-				grid-gap: 10px;
 				grid-area: cafe9;
-
 			}
 			.cafe10 {
-				display: grid;
-				grid-template-rows: 3fr 1fr;
-				grid-template-areas:
-				"cafe"
-				"titol";
-				grid-gap: 10px;
 				grid-area: cafe10;
-
 			}
 			.cafe11 {
-				display: grid;
-				grid-template-rows: 3fr 1fr;
-				grid-template-areas:
-				"cafe"
-				"titol";
-				grid-gap: 10px;
 				grid-area: cafe11;
-
 			}
 			.contingut {
 				display: grid;
-				grid-gap: 10px;
 				justify-content: space-around;
 				grid-template-columns: 1fr 1fr 1fr;
-
 				grid-template-rows: repeat(4, auto);
-
 				grid-template-areas:
 				"cafe1 cafe2 cafe3"
 				"cafe4 cafe5 cafe6"
 				"cafe7 cafe8 cafe9"
 				"cafe10 cafe11 .";
 				grid-area: contingut;
-				background-color: beige;
 				grid-gap: 20px;
+				padding: 10px;
 			}
 			.dreta {
 				grid-area: dreta;
 				background-color: black;
 			}
+			.missatge {
+				grid-area: missatge;
+				text-align: center;
+			}
 			.peu {
+				display: grid;
+				grid-template-columns: 3fr 1fr 1fr;
+				grid-template-rows: repeat(5, 1fr);
+				grid-template-areas:
+				 ". . ."
+				 ". button ."
+				 "missatge button ."
+				 ". button ."
+				 ". . .";
 				grid-area: peu;
 				background-color: brown;
 			}
 			.contenidor {
 				height: 100%;
 				display: grid;
-				grid-gap: 0px 10px;
 				grid-template-columns: 1fr 1fr 5fr 1fr;
 				grid-template-rows: 1fr 8fr 1fr;
 				grid-template-areas:
-				"esquerra capçalera capçalera dreta"
-				"esquerra lateral contingut dreta"
-				"esquerra lateral peu dreta";
+				". capçalera capçalera ."
+				". lateral contingut ."
+				". lateral peu .";
 			}
             .img-object{
                 width: 100%;
@@ -196,11 +170,6 @@
                 grid-auto-flow: column;
                 grid-template-columns: auto 1fr 1fr;
             }
-			.card{
-				background-color: white;
-				border-radius: 20px;
-				box-shadow: 5px 5px 5px #ccc;
-			}
 		</style>
 	</head>
 	<body>
@@ -228,53 +197,56 @@
 			</div>
 			<div class="esquerra"></div>
 			<div class="contingut">
-				<div class="card cafe1">
+				<div class="cafe1 cafes">
 					<div class="cafe"><img class="img-object" src="images/cafe_cappuccino.png" alt="Imatge d'un café cappuccino"></img></div>
-					<div class="titol">Café cappuccino</div>
+					<div class="titol"><strong>Café cappuccino</strong> (3,95€)</div>
 				</div>
-				<div class="card cafe2">
+				<div class="cafe2 cafes">
 					<div class="cafe"><img class="img-object" src="images/cafe-americano-oferta.png" alt="Imatge d'un café americà"></img></div>
-					<div class="titol">Café americà</div>
+					<div class="titol"><strong>Café americà</strong> (2,95€)</div>
 				</div>
-				<div class="card cafe3">
+				<div class="cafe3 cafes">
 					<div class="cafe"><img class="img-object" src="images/cafe-expresso.png" alt="Imatge d'un café expresso"></img></div>
-					<div class="titol">Café expresso</div>
+					<div class="titol"><strong>Café expresso</strong> (3,50€)</div>
 				</div>
-				<div class="card cafe4">
+				<div class="cafe4 cafes">
 					<div class="cafe"><img class="img-object" src="images/cafe-mocha.png" alt="Imatge d'un café mocha"></img></div>
-					<div class="titol">Café mocha</div>
+					<div class="titol"><strong>Café mocha</strong> (2,10€)</div>
 				</div>
-				<div class="card cafe5">
+				<div class="cafe5 cafes">
 					<div class="cafe"><img class="img-object" src="images/cappuccino-freddo.png" alt="Imatge d'un café cappucino freddo"></img></div>
-					<div class="titol">Café cappucino freddo</div>
+					<div class="titol"><strong>Café cappucino freddo</strong> (1,95€)</div>
 				</div>
-				<div class="card cafe6">
+				<div class="cafe6 cafes">
 					<div class="cafe"><img class="img-object" src="images/caramel-macchiato.png" alt="Imatge d'un café caramel macchiato"></img></div>
-					<div class="titol">Café caramel macchiato</div>
+					<div class="titol"><strong>Café caramel macchiato</strong> (4,00€)</div>
 				</div>
-				<div class="card cafe7">
+				<div class="cafe7 cafes">
 					<div class="cafe"><img class="img-object" src="images/cold-brew.png" alt="Imatge d'un café cold brew"></img></div>
-					<div class="titol">Café cold brew</div>
+					<div class="titol"><strong>Café cold brew</strong> (3,75€)</div>
 				</div>
-				<div class="card cafe8">
+				<div class="cafe8 cafes">
 					<div class="cafe"><img class="img-object" src="images/flat-white.png" alt="Imatge d'un café flat white"></img></div>
-					<div class="titol">Café flat white</div>
+					<div class="titol"><strong>Café flat white</strong> (2,75€)</div>
 				</div>
-				<div class="card cafe9">
+				<div class="cafe9 cafes">
 					<div class="cafe"><img class="img-object" src="images/latte.png" alt="Imatge d'un café latte"></img></div>
-					<div class="titol">Café latte</div>
+					<div class="titol"><strong>Café latte</strong> (3,10€)</div>
 				</div>
-				<div class="card cafe10">
+				<div class="cafe10 cafes">
 					<div class="cafe"><img class="img-object" src="images/latte-macchiato.png" alt="Imatge d'un café latte macchiato"></img></div>
-					<div class="titol">Café latte macchiato</div>
+					<div class="titol"><strong>Café latte macchiato</strong> (2,50€)</div>
 				</div>
-				<div class="card cafe11">
+				<div class="cafe11 cafes">
 					<div class="cafe"><img class="img-object" src="images/mochablanc.png" alt="Imatge d'un café mochablanc"></img></div>
-					<div class="titol">Café mochablanc</div>
+					<div class="titol"><strong>Café mochablanc</strong> (5,00€)</div>
 				</div>
 			</div>
 			<div class="dreta"></div>
-			<div class="peu"></div>
+			<div class="peu">
+				<div class="missatge">Import total: 0,00€ (Ha d'arribar a l'import mínim per a poder procedir al pagament)</div>
+				<button class="disabled" type="button" onclick="location.href=''" disabled><strong>Pagar</strong></button>
+			</div>
 		</div>
 	</body>
 </html>
