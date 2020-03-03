@@ -1,0 +1,169 @@
+<html>
+	<head>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			.capçalera {
+				grid-area: capçalera;
+				background-color: brown;
+			}
+			.lateral {
+				grid-area: lateral;
+				background-color: gray;
+			}
+			.esquerra {
+				grid-area: esquerra;
+				background-color: black;
+			}
+			.cafe1 {
+				grid-area: cafe1;
+				/* background-image: url(cafe_cappuccino.png);
+				background-size: contain;
+    			background-position: center;
+    			background-repeat: no-repeat; */
+			}
+			.cafe2 {
+				grid-area: cafe2;
+				/* background-image: url(cafe-americano-oferta.png);
+				background-size: contain;
+    			background-position: center;
+    			background-repeat: no-repeat; */
+			}
+			.cafe3 {
+				grid-area: cafe3;
+				/* background-image: url(cafe-expresso.png); */
+				/* background-size: contain;
+    			background-position: center;
+    			background-repeat: no-repeat; */
+			}
+			.cafe4 {
+				grid-area: cafe4;
+				/* background-image: url(cafe-mocha.png); */
+				/* background-size: contain;
+    			background-position: center;
+    			background-repeat: no-repeat; */
+			}
+			.cafe5 {
+				grid-area: cafe5;
+				/* background-image: url(cappuccino-freddo.png);
+				background-size: contain;
+    			background-position: center;
+    			background-repeat: no-repeat; */
+			}
+			.cafe6 {
+				grid-area: cafe6;
+				/* background-image: url(caramel-macchiato.png);
+				background-size: contain;
+    			background-position: center;
+    			background-repeat: no-repeat; */
+			}
+			.cafe7 {
+				grid-area: cafe7;
+				/* background-image: url(cold-brew.png);
+				background-size: contain;
+    			background-position: center;
+    			background-repeat: no-repeat; */
+			}
+			.cafe8 {
+				grid-area: cafe8;
+				/* background-image: url(flat-white.png);
+				background-size: contain;
+    			background-position: center;
+    			background-repeat: no-repeat; */
+			}
+			.cafe9 {
+				grid-area: cafe9;
+				/* background-image: url(latte.png);
+				background-size: contain;
+    			background-position: center;
+    			background-repeat: no-repeat; */
+			}
+			.cafe10 {
+				grid-area: cafe10;
+				/* background-image: url(latte-macchiato.png);
+				background-size: contain;
+    			background-position: center;
+    			background-repeat: no-repeat; */
+			}
+			.cafe11 {
+				grid-area: cafe11;
+				/* background-image: url(mochablanc.png);
+				background-size: contain;
+    			background-position: center;
+    			background-repeat: no-repeat; */
+			}
+			.contingut {
+				display: grid;
+				grid-gap: 10px;
+				justify-content: space-around;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-template-rows: repeat(3, 1fr);
+				grid-template-areas:
+				"cafe1 cafe2 cafe3"
+				"cafe4 cafe5 cafe6"
+				"cafe7 cafe8 cafe9"
+				"cafe10 cafe11 .";
+				grid-area: contingut;
+				background-color: beige;
+			}
+			.dreta {
+				grid-area: dreta;
+				background-color: black;
+			}
+			.peu {
+				grid-area: peu;
+				background-color: brown;
+			}
+			.contenidor {
+				height: 100%;
+				display: grid;
+				grid-gap: 0px 10px;
+				grid-template-columns: 1fr 1fr 5fr 1fr;
+				grid-template-rows: 1fr 8fr 1fr;
+				grid-template-areas:
+				"esquerra capçalera capçalera dreta"
+				"esquerra lateral contingut dreta"
+				"esquerra lateral peu dreta";
+			}
+            .img-object{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: grid;
+            }
+		</style>
+	</head>
+	<body>
+		<div class="contenidor">
+			<div class="capçalera"></div>
+			<div class="lateral">
+				<div class="submenu1">SUBMENÚ 1</div>
+				<div class="submenu2">SUBMENÚ 2</div>
+				<div class="submenu3">SUBMENÚ 3</div>
+				<div class="submenu4">SUBMENÚ 4</div>
+				<div class="submenu5">SUBMENÚ 5</div>
+				<div class="submenu6">SUBMENÚ 6</div>
+				<div class="submenu7">SUBMENÚ 7</div>
+				<div class="submenu8">SUBMENÚ 8</div>
+			</div>
+			<div class="esquerra"></div>
+			<div class="contingut">
+				<div class="cafe1"><img class="img-object" src="images/cafe_cappuccino.png" alt=""></img></div>
+				<div class="cafe2"><img class="img-object" src="images/cafe-americano-oferta.png" alt="">ELEMENT 2</img></div>
+				<div class="cafe3"><img class="img-object" src="images/cafe-expresso.png" alt="">ELEMENT 3</img></div>
+				<div class="cafe4"><img class="img-object" src="images/cafe-mocha.png" alt="">ELEMENT 4</img></div>
+				<div class="cafe5"><img class="img-object" src="images/cappuccino-freddo.png" alt="">ELEMENT 5</img></div>
+				<div class="cafe6"><img class="img-object" src="images/caramel-macchiato.png" alt="">ELEMENT 6</img></div>
+                <div class="cafe7"><img class="img-object" src="images/cold-brew.png" alt="">ELEMENT 7</img></div>
+				<div class="cafe8"><img class="img-object" src="images/flat-white.png" alt="">ELEMENT 8</img></div>
+                <div class="cafe9"><img class="img-object" src="images/latte.png" alt="">ELEMENT 9</img></div>
+				<div class="cafe10"><img class="img-object" src="images/latte-macchiato.png" alt="">ELEMENT 10</img></div>
+                <div class="cafe11"><img class="img-object" src="images/mochablanc.png" alt="">ELEMENT 11</img></div>
+			</div>
+			<div class="dreta"></div>
+			<div class="peu"></div>
+		</div>
+	</body>
+</html>
