@@ -22,47 +22,120 @@
 				grid-area: esquerra;
 				background-color: black;
 			}
+			.cafe {
+				grid-area: cafe;
+			}
+			.titol {
+				grid-area: titol;
+				text-align: center;
+			}
 			.cafe1 {
+				display: grid;
+				grid-template-rows: 3fr 1fr;
+				grid-template-areas:
+				"cafe"
+				"titol";
+				grid-gap: 10px;
 				grid-area: cafe1;
 
 			}
 			.cafe2 {
+				display: grid;
+				grid-template-rows: 3fr 1fr;
+				grid-template-areas:
+				"cafe"
+				"titol";
+				grid-gap: 10px;
 				grid-area: cafe2;
 
 			}
 			.cafe3 {
+				display: grid;
+				grid-template-rows: 3fr 1fr;
+				grid-template-areas:
+				"cafe"
+				"titol";
+				grid-gap: 10px;
 				grid-area: cafe3;
 
 			}
 			.cafe4 {
+				display: grid;
+				grid-template-rows: 3fr 1fr;
+				grid-template-areas:
+				"cafe"
+				"titol";
+				grid-gap: 10px;
 				grid-area: cafe4;
 
 			}
 			.cafe5 {
+				display: grid;
+				grid-template-rows: 3fr 1fr;
+				grid-template-areas:
+				"cafe"
+				"titol";
+				grid-gap: 10px;
 				grid-area: cafe5;
 
 			}
 			.cafe6 {
+				display: grid;
+				grid-template-rows: 3fr 1fr;
+				grid-template-areas:
+				"cafe"
+				"titol";
+				grid-gap: 10px;
 				grid-area: cafe6;
 
 			}
 			.cafe7 {
+				display: grid;
+				grid-template-rows: 3fr 1fr;
+				grid-template-areas:
+				"cafe"
+				"titol";
+				grid-gap: 10px;
 				grid-area: cafe7;
 
 			}
 			.cafe8 {
+				display: grid;
+				grid-template-rows: 3fr 1fr;
+				grid-template-areas:
+				"cafe"
+				"titol";
+				grid-gap: 10px;
 				grid-area: cafe8;
 
 			}
 			.cafe9 {
+				display: grid;
+				grid-template-rows: 3fr 1fr;
+				grid-template-areas:
+				"cafe"
+				"titol";
+				grid-gap: 10px;
 				grid-area: cafe9;
 
 			}
 			.cafe10 {
+				display: grid;
+				grid-template-rows: 3fr 1fr;
+				grid-template-areas:
+				"cafe"
+				"titol";
+				grid-gap: 10px;
 				grid-area: cafe10;
 
 			}
 			.cafe11 {
+				display: grid;
+				grid-template-rows: 3fr 1fr;
+				grid-template-areas:
+				"cafe"
+				"titol";
+				grid-gap: 10px;
 				grid-area: cafe11;
 
 			}
@@ -71,7 +144,9 @@
 				grid-gap: 10px;
 				justify-content: space-around;
 				grid-template-columns: 1fr 1fr 1fr;
-				grid-template-rows: repeat(4, 1fr);
+
+				grid-template-rows: repeat(4, auto);
+
 				grid-template-areas:
 				"cafe1 cafe2 cafe3"
 				"cafe4 cafe5 cafe6"
@@ -79,6 +154,7 @@
 				"cafe10 cafe11 .";
 				grid-area: contingut;
 				background-color: beige;
+				grid-gap: 20px;
 			}
 			.dreta {
 				grid-area: dreta;
@@ -104,6 +180,7 @@
                 height: 100%;
                 object-fit: contain;
                 display: grid;
+                grid-area: cafe;
             }
             .mis-pedidos{
                 width:100%;
@@ -145,17 +222,50 @@
 			</div>
 			<div class="esquerra"></div>
 			<div class="contingut">
-				<div class="cafe1"><img class="img-object" src="images/cafe_cappuccino.png" alt=""></img></div>
-				<div class="cafe2"><img class="img-object" src="images/cafe-americano-oferta.png" alt="">ELEMENT 2</img></div>
-				<div class="cafe3"><img class="img-object" src="images/cafe-expresso.png" alt="">ELEMENT 3</img></div>
-				<div class="cafe4"><img class="img-object" src="images/cafe-mocha.png" alt="">ELEMENT 4</img></div>
-				<div class="cafe5"><img class="img-object" src="images/cappuccino-freddo.png" alt="">ELEMENT 5</img></div>
-				<div class="cafe6"><img class="img-object" src="images/caramel-macchiato.png" alt="">ELEMENT 6</img></div>
-                <div class="cafe7"><img class="img-object" src="images/cold-brew.png" alt="">ELEMENT 7</img></div>
-				<div class="cafe8"><img class="img-object" src="images/flat-white.png" alt="">ELEMENT 8</img></div>
-                <div class="cafe9"><img class="img-object" src="images/latte.png" alt="">ELEMENT 9</img></div>
-				<div class="cafe10"><img class="img-object" src="images/latte-macchiato.png" alt="">ELEMENT 10</img></div>
-                <div class="cafe11"><img class="img-object" src="images/mochablanc.png" alt="">ELEMENT 11</img></div>
+				<div class="cafe1">
+					<div class="cafe"><img class="img-object" src="images/cafe_cappuccino.png" alt="Imatge d'un café cappuccino"></img></div>
+					<div class="titol">Café cappuccino</div>
+				</div>
+				<div class="cafe2">
+					<div class="cafe"><img class="img-object" src="images/cafe-americano-oferta.png" alt="Imatge d'un café americà"></img></div>
+					<div class="titol">Café americà</div>
+				</div>
+				<div class="cafe3">
+					<div class="cafe"><img class="img-object" src="images/cafe-expresso.png" alt="Imatge d'un café expresso"></img></div>
+					<div class="titol">Café expresso</div>
+				</div>
+				<div class="cafe4">
+					<div class="cafe"><img class="img-object" src="images/cafe-mocha.png" alt="Imatge d'un café mocha"></img></div>
+					<div class="titol">Café mocha</div>
+				</div>
+				<div class="cafe5">
+					<div class="cafe"><img class="img-object" src="images/cappuccino-freddo.png" alt="Imatge d'un café cappucino freddo"></img></div>
+					<div class="titol">Café cappucino freddo</div>
+				</div>
+				<div class="cafe6">
+					<div class="cafe"><img class="img-object" src="images/caramel-macchiato.png" alt="Imatge d'un café caramel macchiato"></img></div>
+					<div class="titol">Café caramel macchiato</div>
+				</div>
+				<div class="cafe7">
+					<div class="cafe"><img class="img-object" src="images/cold-brew.png" alt="Imatge d'un café cold brew"></img></div>
+					<div class="titol">Café cold brew</div>
+				</div>
+				<div class="cafe8">
+					<div class="cafe"><img class="img-object" src="images/flat-white.png" alt="Imatge d'un café flat white"></img></div>
+					<div class="titol">Café flat white</div>
+				</div>
+				<div class="cafe9">
+					<div class="cafe"><img class="img-object" src="images/latte.png" alt="Imatge d'un café latte"></img></div>
+					<div class="titol">Café latte</div>
+				</div>
+				<div class="cafe10">
+					<div class="cafe"><img class="img-object" src="images/latte-macchiato.png" alt="Imatge d'un café latte macchiato"></img></div>
+					<div class="titol">Café latte macchiato</div>
+				</div>
+				<div class="cafe11">
+					<div class="cafe"><img class="img-object" src="images/mochablanc.png" alt="Imatge d'un café mochablanc"></img></div>
+					<div class="titol">Café mochablanc</div>
+				</div>
 			</div>
 			<div class="dreta"></div>
 			<div class="peu"></div>
