@@ -12,93 +12,116 @@
                 --salmo:  #F2E2D5;
             }
 
-
+            *{
+                padding:0;
+                margin:0;
+            }
 
             body{
                 padding: 0;
                 margin:0;
                 background-color: var(--groc);
             }
-            .container{
-                display: grid;
-                height: 100vh;
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(6,200px);
-                justify-content: center;
-            }
             .info{
                 display: grid;
-                grid-template-rows: 2fr 1fr;
                 justify-content: center;
+                grid-template-rows:2fr 1fr;
+                grid-template-areas:
+                "cafe"
+                "desc"
             }
-            .titol{
+            .titol2{
                 display: grid;
+                align-self: center;
                 justify-content: center;
-                align-items: center;
+                grid-area: "cafe";
             }
             .descripcio{
-
-            }
-            .grup-tamany{
-                
-            }
-            .tamany{
                 display: grid;
-                grid-auto-flow: column;
+                justify-content: center;
+                grid-area: "desc";
             }
-            .petit{
-                transform: scale(0.5);
-            }
-            .mitja{
-                transform: scale(0.75);
-            }
-            .grup-temperatura{
-
-            }
-            .temperatura{
+            .container{
                 display: grid;
-                grid-auto-flow: column;
+                grid-template-columns: 1fr;
+                grid-template-rows:1fr repeat(5,400px);
+                justify-content: center;
             }
-            .edulcorante{
+            .grup{
+    			display: grid;
+                justify-content: center;
+    			grid-template-columns: 1fr;
+    			grid-template-rows:auto 3fr;
+    			grid-template-areas:
+    			"titolCategoria"
+    			"opcions";
+            }
 
-            }
-            .topping{
-
-            }
+            .cafes {
+				display: grid;
+                width: 100%;
+                height: 100%;
+				grid-template-rows: 200px 100px;
+				grid-template-areas:
+				"cafe"
+				"titol";
+				grid-gap: 10px;
+				background-color: white;
+				border-radius: 25px;
+				box-shadow: 2px 2px #888888;
+			}
             .img-object{
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
                 display: grid;
             }
+            .cafe {
+                width: 100%;
+                height: 100%;
+				grid-area: cafe;
+			}
+            .titol {
+				grid-area: titol;
+				text-align: center;
+			}
+
         </style>
     </head>
     <body>
         <div class="container">
             <div class="info">
-                <h2 class="titol">
+                <h2 class="titol2">
                     Café mochablanc
                 </h2>
                 <div class="descripcio">
                     Irresistible combinación de chocolate blanco, shots de Espresso y leche perfectamente vaporizada, coronado con crema batida.
                 </div>
             </div>
-            <div class="grup-tamany">
+            <div class="grup">
                 <h2>Tamany</h2>
                 <div class="tamany">
-                    <div class="cafe"><img class="img-object petit" src="images/mochablanc.png" alt="Imatge d'un café mochablanc"></img></div>
-                    <div class="cafe"><img class="img-object mitja" src="images/mochablanc.png" alt="Imatge d'un café mochablanc"></img></div>
-                    <div class="cafe"><img class="img-object gran" src="images/mochablanc.png" alt="Imatge d'un café mochablanc"></img></div>
+                    <div class=" cafes">
+    					<div class="cafe"><img class="img-object" src="images/cafe_cappuccino.png" alt="Imatge d'un café cappuccino"></img></div>
+    					<div class="titol"><strong>Café cappuccino</strong> (3,95€)</div>
+    				</div>
+                    <div class=" cafes">
+    					<div class="cafe"><img class="img-object" src="images/cafe_cappuccino.png" alt="Imatge d'un café cappuccino"></img></div>
+    					<div class="titol"><strong>Café cappuccino</strong> (3,95€)</div>
+    				</div>
+                    <div class=" cafes">
+    					<div class="cafe"><img class="img-object" src="images/cafe_cappuccino.png" alt="Imatge d'un café cappuccino"></img></div>
+    					<div class="titol"><strong>Café cappuccino</strong> (3,95€)</div>
+    				</div>
                 </div>
             </div>
-            <div class="grup-temperatura">
+            <!-- <div class="grup-temperatura">
                 <h2>Temperatura</h2>
-                <div class="temperatura">
-                    <div class="cafe"><img class="img-object gran" src="images/coffee-cup-hot.svg" alt="Imatge d'un café mochablanc"></img></div>
-
-                </div>
-            </div>
-            <div class="edulcorante">
+                <div class="temperatura">-->
+                    <!-- <div class="cafe"><img class="img-object gran" src="images/coffee-cup-hot.svg" alt="Imatge d'un café mochablanc"></img></div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="edulcorante">
                 <h2>Edulcorante</h2>
                 <div class="edulcorante">
                 </div>
@@ -108,9 +131,10 @@
                 <div class="topping">
                 </div>
             </div>
-            <div class="validar">
 
-            </div>
+            <div class="validar">
+                <input type="number" name="" value="2" disabled>
+            </div> -->
         </div>
     </body>
 </html>
