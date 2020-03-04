@@ -12,9 +12,7 @@
 				margin: 0px;
 				padding: 0px;
 			}
-			body {
-				background-color: var(--groc);
-			}
+			body { background-color: var(--groc); }
 			button {
 				color: black;
 			    background-color: var(--verd);
@@ -25,35 +23,31 @@
 			    cursor: pointer;
 			    grid-area: button;
 			}
+			.logo { grid-area: logo; }
+            .moonbucks { grid-area: moonbucks; }
+            .help { grid-area: help; }
+            .cancel { grid-area: cancel; }
 			.capcalera {
 				grid-area: capçalera;
 				background-color: var(--taronja);
                 display:grid;
-                grid-template-columns: 4fr;
+                grid-template-columns: 20% 60% 10% 10%;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-areas:
+				"logo . . ."
+				"logo moonbucks help cancel"
+				"logo . . .";
 			}
-			.void {
-				display: void;
-			}
-			.titollateral {
-				grid-area: titollateral;
-			}
+			.titollateral { grid-area: titollateral; }
 			.cafe_detall {
 				background-color: #ffffffa8;
 				border-radius: 25px;
 				padding: 10px;
 			}
-			.cafe_detall1 {
-				grid-area: cafe_detall1;
-			}
-			.cafe_detall2 {
-				grid-area: cafe_detall2;
-			}
-			.cafe_detall3 {
-				grid-area: cafe_detall3;
-			}
-			.cafe_detall4 {
-				grid-area: cafe_detall4;
-			}
+			.cafe_detall1 { grid-area: cafe_detall1; }
+			.cafe_detall2 { grid-area: cafe_detall2; }
+			.cafe_detall3 { grid-area: cafe_detall3; }
+			.cafe_detall4 { grid-area: cafe_detall4; }
 			.detall {
 				grid-area: detall;
 				display: grid;
@@ -80,15 +74,12 @@
 				"detall"
 				"total";
 				padding: 10px;
-
 			}
 			.esquerra {
 				grid-area: esquerra;
 				background-color: black;
 			}
-			.cafe {
-				grid-area: cafe;
-			}
+			.cafe { grid-area: cafe; }
 			.titol {
 				grid-area: titol;
 				text-align: center;
@@ -108,44 +99,22 @@
 				box-shadow: 4px 4px #888888;
 				cursor: pointer;
 			}
-			.cafe1 {
-				grid-area: cafe1;
-			}
-			.cafe2 {
-				grid-area: cafe2;
-			}
-			.cafe3 {
-				grid-area: cafe3;
-			}
-			.cafe4 {
-				grid-area: cafe4;
-			}
-			.cafe5 {
-				grid-area: cafe5;
-			}
-			.cafe6 {
-				grid-area: cafe6;
-			}
-			.cafe7 {
-				grid-area: cafe7;
-			}
-			.cafe8 {
-				grid-area: cafe8;
-			}
-			.cafe9 {
-				grid-area: cafe9;
-			}
-			.cafe10 {
-				grid-area: cafe10;
-			}
-			.cafe11 {
-				grid-area: cafe11;
-			}
+			.cafe1 { grid-area: cafe1; }
+			.cafe2 { grid-area: cafe2; }
+			.cafe3 { grid-area: cafe3; }
+			.cafe4 { grid-area: cafe4; }
+			.cafe5 { grid-area: cafe5; }
+			.cafe6 { grid-area: cafe6; }
+			.cafe7 { grid-area: cafe7; }
+			.cafe8 { grid-area: cafe8; }
+			.cafe9 { grid-area: cafe9; }
+			.cafe10 { grid-area: cafe10; }
+			.cafe11 { grid-area: cafe11; }
 			.contingut {
 				display: grid;
 				justify-content: space-around;
 				grid-template-columns: 1fr 1fr 1fr;
-				grid-template-rows: repeat(4, auto);
+				grid-template-rows: repeat(4, 22%);
 				grid-template-areas:
 				"cafe1 cafe2 cafe3"
 				"cafe4 cafe5 cafe6"
@@ -155,17 +124,13 @@
 				grid-gap: 20px;
 				padding: 10px;
 			}
-			.dreta {
-				grid-area: dreta;
-				background-color: black;
-			}
 			.missatge {
 				grid-area: missatge;
 				text-align: center;
 			}
 			.peu {
 				display: grid;
-				grid-template-columns: 3fr 1fr 1fr;
+				grid-template-columns: 70% 20% 10%;
 				grid-template-rows: repeat(5, 1fr);
 				grid-template-areas:
 				 ". . ."
@@ -206,14 +171,90 @@
                 grid-auto-flow: column;
                 grid-template-columns: auto 1fr 1fr;
             }
+            @media (max-width: 600px) {
+				.contenidor {
+					display: grid;
+					grid-template-columns: 2fr;
+					grid-template-rows: 10% 10fr 1fr 10%;
+					grid-template-areas:
+					"capçalera"
+					"contingut"
+					"lateral"
+					"peu";
+					height: unset;
+				}
+				.lateral {
+					grid-area: lateral;
+				    background-color: var(--salmo);
+				    display: grid;
+				    grid-template-columns: 1fr;
+				    grid-template-rows: unset;
+				    grid-template-areas:
+				        "titollateral"
+				        "text_cafe"
+				        "total";
+				    padding: 10px;
+				}
+				.contingut {
+					display: grid;
+					justify-content: space-around;
+					grid-template-columns: repeat(2, auto);
+					grid-template-rows: repeat(6, 14%);
+					grid-area: contingut;
+					grid-gap: 20px;
+					padding: 10px;
+					grid-auto-flow: column;
+					grid-template-areas: unset;
+				}
+				.peu {
+					display: grid;
+					grid-template-columns: 10px 1fr 10px;
+					grid-template-rows: 10px 1fr 2fr 10px;
+					grid-template-areas:
+					". . ."
+					". missatge ."
+					". button ."
+					". . .";
+					grid-area: peu;
+					background-color: var(--taronja);
+				}
+				.cafe1 { grid-area: unset; }
+				.cafe2 { grid-area: unset; }
+				.cafe3 { grid-area: unset; }
+				.cafe4 { grid-area: unset; }
+				.cafe5 { grid-area: unset; }
+				.cafe6 { grid-area: unset; }
+				.cafe7 { grid-area: unset; }
+				.cafe8 { grid-area: unset; }
+				.cafe9 { grid-area: unset; }
+				.cafe10 { grid-area: unset; }
+				.cafe11 { grid-area: unset; }
+				.moonbucks {
+					grid-area: moonbucks;
+				    align-self: center;
+				    justify-self: center;
+				}
+				.capcalera {
+					grid-area: capçalera;
+					background-color: var(--taronja);
+	                display:grid;
+	                grid-template-columns: 10% 35% 10% 35% 10%;
+	                grid-template-rows: 70% 10% 20%;
+	                grid-template-areas:
+					". logo . moonbucks ."
+					". . . . ."
+					". help . cancel .";
+				}
+			}
 		</style>
 	</head>
 	<body>
 		<div class="contenidor">
 			<div class="capcalera">
-                <div class="logo">
-                    <img class="img-object" src="images/moonbucks.png" alt="">
-                </div>
+                <div class="logo"><img class="img-object" src="images/moonbucks.png" alt="icono moonbucks"></div>
+                <div class="moonbucks"><h1>Moonbucks</h1></div>
+                <div class="help"><img class="img-object" src="images/help.png" alt="Demanar ajuda"></div>
+                <div class="cancel"><img class="img-object" src="images/tancar.png" alt="Tancar comanda"></div>
             </div>
 			<div class="lateral">
 				<div class="titollateral"><h3>La meva comanda</h3></div>
