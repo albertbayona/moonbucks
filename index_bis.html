@@ -24,6 +24,7 @@
 			    text-align: center;
 			    cursor: pointer;
 			    grid-area: button;
+			    font-size: 4em;
 			}
 			.capcalera {
 				grid-area: capçalera;
@@ -46,15 +47,18 @@
 			}
 			.lateral {
 				grid-area: lateral;
-				background-color: var(--salmo);
-                display: grid;
-                grid-template-rows: 50px 1fr 50px;
-                grid-template-columns: 1fr;
-				grid-template-areas:
-				"titollateral"
-				"text_cafe"
-				"total";
-				padding: 10px;
+			    background-color: var(--salmo);
+			    display: grid;
+			    grid-template-columns: 1fr;
+			    grid-template-areas:
+			        "titollateral"
+			        "text_cafe"
+			        "total";
+			    padding: 10px;
+			}
+			.esquerra {
+				grid-area: esquerra;
+				background-color: black;
 			}
 			.cafe {
 				grid-area: cafe;
@@ -78,79 +82,46 @@
 				box-shadow: 4px 4px #888888;
 				cursor: pointer;
 			}
-			.cafe1 {
-				grid-area: cafe1;
-			}
-			.cafe2 {
-				grid-area: cafe2;
-			}
-			.cafe3 {
-				grid-area: cafe3;
-			}
-			.cafe4 {
-				grid-area: cafe4;
-			}
-			.cafe5 {
-				grid-area: cafe5;
-			}
-			.cafe6 {
-				grid-area: cafe6;
-			}
-			.cafe7 {
-				grid-area: cafe7;
-			}
-			.cafe8 {
-				grid-area: cafe8;
-			}
-			.cafe9 {
-				grid-area: cafe9;
-			}
-			.cafe10 {
-				grid-area: cafe10;
-			}
-			.cafe11 {
-				grid-area: cafe11;
-			}
 			.contingut {
 				display: grid;
 				justify-content: space-around;
-				grid-template-columns: 1fr 1fr 1fr;
-				grid-template-rows: repeat(4, auto);
-				grid-template-areas:
-				"cafe1 cafe2 cafe3"
-				"cafe4 cafe5 cafe6"
-				"cafe7 cafe8 cafe9"
-				"cafe10 cafe11 .";
+				grid-template-columns: repeat(2, auto);
+				grid-template-rows: repeat(6, auto);
 				grid-area: contingut;
 				grid-gap: 20px;
 				padding: 10px;
+				grid-auto-flow: column;
+			}
+			.dreta {
+				grid-area: dreta;
+				background-color: black;
 			}
 			.missatge {
 				grid-area: missatge;
 				text-align: center;
+				font-size: 3em;
 			}
 			.peu {
 				display: grid;
-				grid-template-columns: 3fr 1fr 1fr;
-				grid-template-rows: repeat(5, 1fr);
+				grid-template-columns: 10px 1fr 10px;
+				grid-template-rows: 10px 1fr 2fr 10px;
 				grid-template-areas:
-				 ". . ."
-				 ". button ."
-				 "missatge button ."
-				 ". button ."
-				 ". . .";
+				". . ."
+				". missatge ."
+				". button ."
+				". . .";
 				grid-area: peu;
 				background-color: var(--taronja);
 			}
 			.contenidor {
-				height: 100%;
 				display: grid;
-				grid-template-columns: 1fr 5fr;
-				grid-template-rows: 1fr 8fr 1fr;
+				grid-template-columns: 2fr;
+				grid-template-rows: 1fr 10fr 1fr 1fr;
 				grid-template-areas:
-				"capçalera capçalera"
-				"lateral contingut"
-				"lateral peu";
+				"capçalera"
+				"contingut"
+				"lateral"
+				"peu";
 			}
             .img-object{
                 width: 100%;
@@ -172,70 +143,6 @@
                 grid-auto-flow: column;
                 grid-template-columns: auto 1fr 1fr;
             }
-            @media (max-width: 600px) {
-				button {
-				color: #FFFFFF;
-			    background-color: #868686;
-			    border: none;
-			    overflow: hidden;
-			    text-decoration: none;
-			    text-align: center;
-			    cursor: pointer;
-			    grid-area: button;
-			    font-size: 4em;
-			}
-			.contenidor {
-				display: grid;
-				grid-template-columns: 2fr;
-				grid-template-rows: 1fr 10fr 1fr 1fr;
-				grid-template-areas:
-				"capçalera"
-				"contingut"
-				"lateral"
-				"peu";
-				height: unset;
-			}
-				.lateral {
-				grid-area: lateral;
-			    background-color: var(--salmo);
-			    display: grid;
-			    grid-template-columns: 1fr;
-			    grid-template-rows: unset;
-			    grid-template-areas:
-			        "titollateral"
-			        "text_cafe"
-			        "total";
-			    padding: 10px;
-			}
-			.contingut {
-				display: grid;
-				justify-content: space-around;
-				grid-template-columns: repeat(2, auto);
-				grid-template-rows: repeat(6, auto);
-				grid-area: contingut;
-				grid-gap: 20px;
-				padding: 10px;
-				grid-auto-flow: column;
-				grid-template-areas: unset;
-			}
-			.missatge {
-				grid-area: missatge;
-				text-align: center;
-				font-size: 3em;
-			}
-			.peu {
-				display: grid;
-				grid-template-columns: 10px 1fr 10px;
-				grid-template-rows: 10px 1fr 2fr 10px;
-				grid-template-areas:
-				". . ."
-				". missatge ."
-				". button ."
-				". . .";
-				grid-area: peu;
-				background-color: var(--taronja);
-			}
-			}
 		</style>
 	</head>
 	<body>

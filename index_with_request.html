@@ -65,15 +65,20 @@
 				"cafe_detall3"
 				"cafe_detall4";
 			}
+			.total {
+				grid-area: total;
+				font-weight: bolder;
+			}
 			.lateral {
 				grid-area: lateral;
 				background-color: var(--salmo);
                 display: grid;
-                grid-template-rows: 50px 1fr;
+                grid-template-rows: 50px 1fr 50px;
                 grid-template-columns: 1fr;
 				grid-template-areas:
 				"titollateral"
-				"detall";
+				"detall"
+				"total";
 				padding: 10px;
 
 			}
@@ -218,6 +223,7 @@
 	                <div class="cafe_detall3 cafe_detall"><p><strong>Café americà</strong></p><p>- Tamany: Mitjà</p><p>- Temperatura: Fred</p><p>- Endolcidor: Sucre moré</p><p>- Topping: M&M's (+0,50€)</p></div>
 	                <div class="cafe_detall4 cafe_detall"><p><strong>Café americà</strong></p><p>- Tamany: Mitjà</p><p>- Temperatura: Fred</p><p>- Endolcidor: Sucre moré</p><p>- Topping: M&M's (+0,50€)</p></div>
 	            </div>
+	            <div class="total">Import total: 13,45€</div>
 			</div>
 			<div class="esquerra"></div>
 			<div class="contingut">
