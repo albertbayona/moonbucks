@@ -43,6 +43,7 @@
 				background-color: #ffffffa8;
 				border-radius: 25px;
 				padding: 10px;
+    			height: fit-content;
 			}
 			.cafe_detall1 { grid-area: cafe_detall1; }
 			.cafe_detall2 { grid-area: cafe_detall2; }
@@ -51,7 +52,7 @@
 			.detall {
 				grid-area: detall;
 				display: grid;
-				grid-template-rows: repeat(4, 110px);
+				grid-template-rows: repeat(4, 23%);
 				grid-gap: 10px;
 				grid-template-areas:
 				"cafe_detall1"
@@ -144,7 +145,7 @@
 			.contenidor {
 				height: 100%;
 				display: grid;
-				grid-template-columns: 1fr 5fr;
+				grid-template-columns: 3fr 8fr;
 				grid-template-rows: 1fr 8fr 1fr;
 				grid-template-areas:
 				"capçalera capçalera"
@@ -175,13 +176,12 @@
 				.contenidor {
 					display: grid;
 					grid-template-columns: 2fr;
-					grid-template-rows: 10% 10fr 1fr 10%;
+					grid-template-rows: 10% 10fr 5fr 10%;
 					grid-template-areas:
 					"capçalera"
 					"contingut"
 					"lateral"
 					"peu";
-					height: unset;
 				}
 				.lateral {
 					grid-area: lateral;
@@ -245,6 +245,33 @@
 					". . . . ."
 					". help . cancel .";
 				}
+				.detall {
+					grid-area: detall;
+					display: grid;
+					grid-template-rows: repeat(4, auto);
+					grid-gap: 10px;
+					grid-template-areas:
+					"cafe_detall1"
+					"cafe_detall2"
+					"cafe_detall3"
+					"cafe_detall4";
+					align-content: space-between;
+				}
+				.lateral {
+					display: grid;
+					justify-content: space-around;
+					grid-template-columns: repeat(1, auto);
+					grid-template-rows: 10% 80% 10%;
+					grid-area: lateral;
+					grid-gap: 20px;
+					padding: 10px;
+					grid-template-areas:
+					"titollateral"
+					"detall"
+					"total";
+				}
+				.titollateral { text-align: center; }
+				.total { text-align: center; }
 			}
 		</style>
 	</head>
@@ -313,7 +340,6 @@
 					<div class="titol"><strong>Café mochablanc</strong> (5,00€)</div>
 				</div>
 			</div>
-			<div class="dreta"></div>
 			<div class="peu">
 				<button class="disabled" type="button" onclick="location.href=''"><strong>Pagar</strong></button>
 			</div>
