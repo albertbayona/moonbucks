@@ -10,6 +10,7 @@
                 --grocfosc:  #F1F1C0;
                 --taronja:  #FDC79B;
                 --salmo:  #F2E2D5;
+                --cancel:  #ffb4b4;
             }
 
             *{
@@ -25,15 +26,22 @@
             .container{
                 display: grid;
                 grid-template-columns: 1fr;
-                grid-template-rows:1fr 1fr repeat(5,50vh);
+                grid-template-rows:repeat(5,2fr) 1fr;
                 justify-content: center;
-
+                grid-row-gap:20px;
             }
-            .capcalera {
+            .capcalera{
+                display:grid;
+                grid-template-columns: 1fr 4fr 1fr;
+                grid-template-rows: 100px 100px;
+                background-color: var(--taronja);
+            }
+            .logo{
+                grid-row: span 2;
+            }
+            .info {
+                grid-column: 2;
                 height: 200px;
-				background-color: var(--taronja);
-			}
-            .info{
                 display: grid;
                 justify-content: center;
                 grid-template-rows:2fr 1fr;
@@ -51,6 +59,7 @@
                 display: grid;
                 justify-content: center;
                 grid-area: "desc";
+
             }
 
             .grup{
@@ -62,6 +71,7 @@
     			grid-template-areas:
     			"titolCategoria"
     			"opcions";
+                border-top: var(--salmo) 1px solid;
             }
             .tamany{
                 display:grid;
@@ -116,6 +126,41 @@
                 transform: scale(0.75);
             }
 
+            .Edulcorantes{
+                display:grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-column-gap: 30px;
+            }
+            .Toppings{
+                display:grid;
+                grid-template-columns: repeat(5,1fr);
+                grid-column-gap: 30px;
+            }
+            .footer{
+                background-color: var(--taronja);
+                display: grid;
+                grid-template-columns:repeat(7,1fr);
+                grid-template-rows:repeat(3,1fr);
+            }
+            button {
+
+				color: black;
+			    border: none;
+			    overflow: hidden;
+			    text-decoration: none;
+			    text-align: center;
+			    cursor: pointer;
+			}
+            .demana{
+                grid-column: 6;
+                grid-row: 2;
+                background-color: var(--verd);
+            }
+            .cancela{
+                grid-column: 2;
+                grid-row: 2;
+                background-color: var(--cancel);
+            }
             @media only screen and (max-width: 600px) {
              body{
                  background-color: var(--verd);
@@ -125,13 +170,20 @@
     </head>
     <body>
         <div class="container">
-            
-            <div class="info">
-                <h2 class="titol2">
-                    Café mochablanc
-                </h2>
-                <div class="descripcio">
-                    Irresistible combinación de chocolate blanco, shots de Espresso y leche perfectamente vaporizada, coronado con crema batida.
+            <div class="capcalera">
+                <div class="logo">
+                    <img class="img-object" src="images/moonbucks.png" alt="Logo de moonbucks">
+                </div>
+                <div class="info">
+                    <h2 class="titol2">
+                        Café mochablanc
+                    </h2>
+                    <div class="descripcio">
+                        Irresistible combinación de chocolate blanco, shots de Espresso y leche perfectamente vaporizada, coronado con crema batida.
+                    </div>
+                </div>
+                <div class="cancelarX">
+                    <img class="img-object" src="images/moonbucks.png" alt="Logo de moonbucks">
                 </div>
             </div>
             <div class="grup">
@@ -161,69 +213,60 @@
                     <div class=" cafes">
     					<div class="cafe"><img class="img-object" src="images\fire.svg" alt=""></img></div>
                         <div class="titol"><strong>Calent</strong></div>
-
     				</div>
                 </div>
             </div>
             <div class="grup">
-                <h2 class="categoria">Edulcorante</h2>
-                <div class="tamany">
+                <h2 class="categoria">Edulcorants</h2>
+                <div class="Edulcorantes">
                     <div class=" cafes">
-    					<div class="cafe"><img class="img-object" src="images\mochablanc.png" alt=""></img></div>
-    					<div class="titol"><strong></strong> (3,95€)</div>
+    					<div class="cafe"><img class="img-object azucar" src="images\azucar.jpg" alt="azucar blanco"></img></div>
+                        <div class="titol"><strong>Azucar</strong></div>
     				</div>
                     <div class=" cafes">
-    					<div class="cafe"><img class="img-object" src="images\mochablanc.png" alt=""></img></div>
-    					<div class="titol"><strong></strong> (3,95€)</div>
+    					<div class="cafe"><img class="img-object moreno" src="images\azucar-moreno.jpg" alt="azucar moreno"></img></div>
+                        <div class="titol"><strong>Azucar moreno</strong></div>
     				</div>
                     <div class=" cafes">
-    					<div class="cafe"><img class="img-object" src="images\mochablanc.png" alt=""></img></div>
-    					<div class="titol"><strong></strong> (3,95€)</div>
+    					<div class="cafe"><img class="img-object" src="images\sacarina.jpg" alt="sacarina"></img></div>
+                        <div class="titol"><strong>sacarina</strong></div>
     				</div>
                     <div class=" cafes">
-    					<div class="cafe"><img class="img-object" src="images\mochablanc.png" alt=""></img></div>
-    					<div class="titol"><strong></strong> (3,95€)</div>
-    				</div>
-                    <div class=" cafes">
-    					<div class="cafe"><img class="img-object" src="images\mochablanc.png" alt=""></img></div>
-    					<div class="titol"><strong></strong> (3,95€)</div>
+    					<div class="cafe"><img class="img-object" src="images\sirope.jpg" alt="sirope de agave"></img></div>
+                        <div class="titol"><strong>Sirope de agave</strong></div>
     				</div>
                 </div>
             </div>
             <div class="grup">
-                <h2 class="categoria">Topping</h2>
-                <div class="tamany">
+                <h2 class="categoria">Toppings</h2>
+                <div class="Toppings">
                     <div class=" cafes">
-    					<div class="cafe"><img class="img-object" src="images\mochablanc.png" alt=""></img></div>
-    					<div class="titol"><strong></strong> (3,95€)</div>
+    					<div class="cafe"><img class="img-object" src="images\xocolata.png" alt="xocolata"></img></div>
+                        <div class="titol"><strong>Xocolata</strong></div>
     				</div>
                     <div class=" cafes">
-    					<div class="cafe"><img class="img-object" src="images\mochablanc.png" alt=""></img></div>
-    					<div class="titol"><strong></strong> (3,95€)</div>
+    					<div class="cafe"><img class="img-object" src="images\coco.png" alt="coco"></img></div>
+                        <div class="titol"><strong>Coco</strong></div>
     				</div>
                     <div class=" cafes">
-    					<div class="cafe"><img class="img-object" src="images\mochablanc.png" alt=""></img></div>
-    					<div class="titol"><strong></strong> (3,95€)</div>
+    					<div class="cafe"><img class="img-object" src="images\sirope-caramelo.png" alt="sirope de caramelo"></img></div>
+                        <div class="titol"><strong>Caramel</strong></div>
     				</div>
                     <div class=" cafes">
-    					<div class="cafe"><img class="img-object" src="images\mochablanc.png" alt=""></img></div>
-    					<div class="titol"><strong></strong> (3,95€)</div>
+    					<div class="cafe"><img class="img-object" src="images\nata.png" alt="nata"></img></div>
+                        <div class="titol"><strong>Nata</strong></div>
     				</div>
                     <div class=" cafes">
-    					<div class="cafe"><img class="img-object" src="images\mochablanc.png" alt=""></img></div>
-    					<div class="titol"><strong></strong> (3,95€)</div>
-    				</div>
-                    <div class=" cafes">
-    					<div class="cafe"><img class="img-object" src="images\mochablanc.png" alt=""></img></div>
-    					<div class="titol"><strong></strong> (3,95€)</div>
+    					<div class="cafe"><img class="img-object" src="images\mandm.png" alt="m&m"></img></div>
+                        <div class="titol"><strong>M&M's</strong></div>
     				</div>
                 </div>
             </div>
 
-<!--
-            <div class="validar">
-                <input type="number" name="" value="2" disabled>
-            </div> -->
+            <div class="footer">
+                <button type="button" class="demana" name="button" value="Demana">Demana</button>
+                <button type="button" class="cancela" name="button" value="Cancela">Cancela</button>
+            </div>
         </div>
     </body>
 </html>
