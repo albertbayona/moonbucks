@@ -1,0 +1,130 @@
+<html>
+	<head>
+		<style>
+			:root  {
+                --verd:  #A6EAC1;
+                --groc:  #FBFBD7;
+                --grocfosc:  #F1F1C0;
+                --taronja:  #FDC79B;
+                --salmo:  #F2E2D5;
+                --cancel:  #FFB4B4;
+            }
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			body { background-color: var(--groc); }
+			button {
+				color: black;
+			    background-color: var(--cancel);
+			    border: none;
+			    overflow: hidden;
+			    text-decoration: none;
+			    text-align: center;
+			    cursor: pointer;
+			    grid-area: button;
+			}
+			.clickeable { cursor: pointer;  }
+			.contenidor {
+				height: 100%;
+				display: grid;
+				grid-template-columns: auto;
+				grid-template-rows: 1fr 8fr 1fr;
+				grid-template-areas:
+				"capçalera "
+				"contingut"
+				"peu";
+			}
+			.logo { grid-area: logo; }
+            .moonbucks { grid-area: moonbucks; }
+            .help { grid-area: help; }
+            .cancel { grid-area: cancel; }
+			.capcalera {
+				grid-area: capçalera;
+				background-color: var(--taronja);
+                display:grid;
+                grid-template-columns: 20% 60% 10% 10%;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-areas:
+				"logo . . ."
+				"logo moonbucks help cancel"
+				"logo . . .";
+			}
+			.imatge { grid-area: imatge; }
+			.titol {
+				grid-area: titol;
+				text-align: center;
+			}
+			.destacar {
+				display: grid;
+				grid-template-rows: 3fr 1fr;
+				grid-template-areas:
+				"imatge"
+				"titol";
+				grid-gap: 10px;
+				background-color: white;
+				border-radius: 25px;
+				box-shadow: 2px 2px #888888;
+			}
+			.destacar:hover {
+				box-shadow: 4px 4px #888888;
+				cursor: pointer;
+			}
+			.efectiu { grid-area: efectiu; }
+            .targeta { grid-area: targeta; }
+			.contingut {
+				display: grid;
+				justify-content: space-around;
+				grid-template-columns: repeat(5, 20%);
+				grid-template-rows: repeat(3, 1fr);
+				grid-template-areas:
+				". . . . . "
+				". efectiu . targeta ."
+				". . . . . ";
+				grid-area: contingut;
+				grid-gap: 20px;
+				padding: 10px;
+			}
+			.peu {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(3, 1fr);
+				grid-template-areas:
+				 ". . ."
+				 ". button ."
+				 ". . .";
+				grid-area: peu;
+				background-color: var(--taronja);
+			}
+			.img-object{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: grid;
+            }
+		</style>
+	</head>
+	<body>
+		<div class="contenidor">
+			<div class="capcalera">
+                <div class="logo"><img class="img-object" src="images/moonbucks.png" alt="icono moonbucks"></div>
+                <div class="moonbucks"><h1>Moonbucks</h1></div>
+                <div class="help"><img class="img-object clickeable" src="images/help.png" alt="Demanar ajuda" onclick="alert('Ara enviem a algú per ajudar!')"></div>
+                <div class="cancel"><img class="img-object clickeable" src="images/tancar.png" alt="Tancar comanda" onclick="location.href='index.html'"></div>
+            </div>
+            <div class="contingut">
+				<div class="efectiu destacar" onclick="location.href=''">
+					<div class="imatge"><img class="img-object" src="images/cash.png" alt="Imatge per indicar pagar en efectiu"></img></div>
+					<div class="titol">Pagar en efectiu en mostrador</div>
+				</div>
+				<div class="targeta destacar" onclick="location.href=''">
+					<div class="imatge"><img class="img-object" src="images/targeta.png" alt="Imatge per indicar pagar amb targeta"></img></div>
+					<div class="titol">Pagar amb targeta</div>
+				</div>
+			</div>
+			<div class="peu">
+				<button type="button" onclick="location.href='index_with_request.html'"><strong>Tornar enrere</strong></button>
+			</div>
+		</div>
+	</body>
+</html>
