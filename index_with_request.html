@@ -45,6 +45,7 @@
 				border-radius: 25px;
 				padding: 10px;
     			height: fit-content;
+				display: grid;
 			}
 			.cafe_detall1 { grid-area: cafe_detall1; }
 			.cafe_detall2 { grid-area: cafe_detall2; }
@@ -160,6 +161,10 @@
                 display: grid;
                 grid-area: cafe;
             }
+			.edit{
+				display: grid;
+				grid-auto-flow: column;
+			}
             @media (max-width: 600px) {
 				.contenidor {
 					display: grid;
@@ -274,10 +279,10 @@
 			<div class="lateral">
 				<div class="titollateral"><h3>La meva comanda</h3></div>
 				<div class="detall">
-	                <div class="cafe_detall1 cafe_detall"><p><strong>Café mochablanc</strong></p><p>- Tamany: Gran</p><p>- Temperatura: Calent</p></div>
-	                <div class="cafe_detall2 cafe_detall"><p><strong>Café mochablanc</strong></p><p>- Tamany: Gran</p><p>- Temperatura: Calent</p></div>
-	                <div class="cafe_detall3 cafe_detall"><p><strong>Café americà</strong></p><p>- Tamany: Mitjà</p><p>- Temperatura: Fred</p><p>- Endolcidor: Sucre moré</p><p>- Topping: M&M's (+0,50€)</p></div>
-	                <div class="cafe_detall4 cafe_detall"><p><strong>Café americà</strong></p><p>- Tamany: Mitjà</p><p>- Temperatura: Fred</p><p>- Endolcidor: Sucre moré</p><p>- Topping: M&M's (+0,50€)</p></div>
+	                <div class="cafe_detall1 cafe_detall"><div class="edit"><strong>Café mochablanc</strong><div onclick="location.href='detail.html'"><img class="img-object" src="images/edit.svg" alt="Llapis per editar commanda"></img></div><div onclick="location.href='index.html'"><img class="img-object" src="images/tancar.png" alt="Imatge d'un café mochablanc"></img></div></div><p>- Tamany: Gran</p><p>- Temperatura: Calent</p></div>
+	                <div class="cafe_detall2 cafe_detall"><div class="edit"><strong>Café mochablanc</strong><div onclick="location.href='detail.html'"><img class="img-object" src="images/edit.svg" alt="Llapis per editar commanda"></img></div><div onclick="location.href='index.html'"><img class="img-object" src="images/tancar.png" alt="Imatge d'un café mochablanc"></img></div></div><p>- Tamany: Gran</p><p>- Temperatura: Calent</p></div>
+	                <div class="cafe_detall3 cafe_detall"><div class="edit"><strong>Café americà</strong><div onclick="location.href='detail_oferta.html'"><img class="img-object" src="images/edit.svg" alt="Llapis per editar commanda"></img></div><div  onclick="location.href='index.html'"><img class="img-object" src="images/tancar.png" alt="Imatge d'un café mochablanc"></img></div></div><p>- Tamany: Mitjà</p><p>- Temperatura: Fred</p><p>- Endolcidor: Sucre moré</p><p>- Topping: M&M's (+0,50€)</p></div>
+	                <div class="cafe_detall4 cafe_detall"><div class="edit"><strong>Café americà</strong><div onclick="location.href='datail_oferta.html'"><img class="img-object" src="images/edit.svg" alt="Llapis per editar commanda"></img></div><div  onclick="location.href='index.html'"><img class="img-object" src="images/tancar.png" alt="Borrar linia de comanda"></img></div></div><p>- Tamany: Mitjà</p><p>- Temperatura: Fred</p><p>- Endolcidor: Sucre moré</p><p>- Topping: M&M's (+0,50€)</p></div>
 	            </div>
 	            <div class="total">Import total: 13,45€</div>
 			</div>
